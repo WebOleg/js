@@ -26,10 +26,4 @@ function isPositive(number){
     }
 }
 
-isPositive(3); // true
-
 console.log(isPositive(-3));
-
-// isPositive(-3); // false
-
-// throw new Error('Error');
