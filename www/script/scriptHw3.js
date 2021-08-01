@@ -11,7 +11,7 @@
 
 // Решение
 function getDivisors(number){
-    if (typeof number === 'number'){
+    if (typeof number === 'number' && number >= 1){
         let numberArr = [];
         for (var i = 0; i <= number; i++) {
             if (number % i == 0){
