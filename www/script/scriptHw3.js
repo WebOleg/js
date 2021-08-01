@@ -1,35 +1,31 @@
 /**
- * Задача 5.
+ * Задача 7.
  *
- * Создайте функцию `isPositive`, которая принимает число качестве аргумента.
- * Функция возвращает булевое значение.
- * Если число, переданное в аргументе положительное — возвращается true.
- * Если число, переданное в аргументе отрицательное — возвращается false.
+ * Создайте функцию `getDivisors`, которая принимает число в качестве аргумента.
+ * Функция возвращает массив его делителей (чисел, на которое делится данное число начиная от 1 и заканчивая самим собой).
  *
  * Условия:
  * - Генерировать ошибку, если в качестве входного аргумента был передан не числовой тип;
+ * - Генерировать ошибку, если в качестве входного аргумента был передано число меньшее, чем 1.
  */
 
 // Решение
-
-function isPositive(number){
+function getDivisors(number){
     if (typeof number === 'number'){
-        if (number >= 0){
-            return true;
+        let numberArr = [];
+        for (var i = 0; i <= number; i++) {
+            if (number % i == 0){
+                numberArr.push(i);
+            }
         }
-        else{
-            return false;
-        }
+        return numberArr;
     }
     else{
         throw new Error('Error');
     }
 }
 
-isPositive(3); // true
+console.log(getDivisors(12));
 
-console.log(isPositive(-3));
-
-// isPositive(-3); // false
-
-// throw new Error('Error');
+// const arr =[];
+// arr.push(i); -> добавление в массив
